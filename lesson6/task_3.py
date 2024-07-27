@@ -14,5 +14,3 @@ try:
     print(get_attribute)
 except Exception as ex:
     print(ex)
-finally:
-    driver.quit()
