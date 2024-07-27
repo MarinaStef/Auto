@@ -7,8 +7,6 @@ from selenium.webdriver.common.by import By
 driver = webdriver.Chrome(
 service=ChromeService(ChromeDriverManager().install()))
 
-driver.implicitly_wait(5)
-
 try:
     driver.get("http://uitestingplayground.com/ajax")
     blue_button = driver.find_element(By.CSS_SELECTOR, "#ajaxButton").click()
