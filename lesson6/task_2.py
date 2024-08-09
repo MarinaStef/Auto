@@ -1,18 +1,12 @@
 from selenium import webdriver
-
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
 driver = webdriver.Chrome(
-service=ChromeService(ChromeDriverManager().install()))
-
-driver.implicitly_wait(5)
-
-try:
-    driver.get("http://uitestingplayground.com/textinput")
-    button_name = driver.find_element(
-        "id", "newButtonName").send_keys("SkyPro")
-    confirm_button_name = driver.find_element("id", "updatingButton").click()
-    new_button_name = driver.find_element("id", "updatingButton").text
-    print(new_button_name)
-except Exception as ex:
-    print(ex)
-finally:
-    driver.quit()
+    service=ChromeService(ChromeDriverManager().install()))
+driver.maximize_window()
+driver.get("http://uitestingplayground.com/textinput")
+driver.find_element(By.ID, "newButtonName").send_keys("SkyPro")
+driver.find_element(By.ID, "updatingButton").click()
+print(driver.find_element(By.ID, "updatingButton").text)
+driver.quit()
