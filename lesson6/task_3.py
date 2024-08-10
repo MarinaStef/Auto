@@ -21,5 +21,3 @@ img_list = driver.find_elements(By.CSS_SELECTOR, "div#image-container > img")
 find_element = img_list[2].get_attribute("src")
 
 print(find_element)
-
-driver.quit()
