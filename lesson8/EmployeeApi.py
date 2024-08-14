@@ -22,9 +22,9 @@ class EmployeeApi:
         return resp.json()
     
     #добавление сотрудника 
-    def create_employee(self, companyId, firstName ="Anna", lastName ="Generozova" , middleName= "Dmitrievna", 
-                        email = "test@mail.ru", url ='https://t.me/gener_anna', phone ="89218305722", 
-                        birthdate ='1999-04-11', isActive = True):
+    def create_employee(self, companyId, firstName ="Marina", lastName ="Stefanova" , middleName= "Yurievna", 
+                        email = "test@mail.ru", url ='https://t.me/gener_anna', phone ="89138981144", 
+                        birthdate ='1999-04-9', isActive = True):
         employee = {
                 "id": 0,
                 "firstName": firstName,
@@ -46,8 +46,8 @@ class EmployeeApi:
         resp = requests.get(self.url + '/employee/' + str(id))
         return resp.json()
     
-    def edit(self, new_id, new_lname ="Sokolova", email = "test123@mail.ru", 
-             url ="https://instagram.com/_anna.roze", phone ="89218308966", isActive = True):
+    def edit(self, new_id, new_lname ="Vlasova", email = "test123@mail.ru", 
+             url ="https://www.instagram.com/marintosss", phone ="972546269560", isActive = True):
         my_headers = {}
         my_headers["x-client-token"] = self.get_token()
         employee = {
