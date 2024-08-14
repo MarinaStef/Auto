@@ -47,8 +47,8 @@ def test_get_one_emploee():
     
     #Проверим id нового сотрудника:
     assert emploee['id'] == id_emploee
-    assert emploee["firstName"] =="Anna"
-    assert emploee["lastName"] == "Generozova"
+    assert emploee["firstName"] =="Marina"
+    assert emploee["lastName"] == "Stefanova"
 
 def test_edit_employee():
     #Создаем компанию
