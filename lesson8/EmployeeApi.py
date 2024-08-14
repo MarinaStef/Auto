@@ -23,7 +23,7 @@ class EmployeeApi:
     
     #добавление сотрудника 
     def create_employee(self, companyId, firstName ="Marina", lastName ="Stefanova" , middleName= "Yurievna", 
-                        email = "test@mail.ru", url ='https://t.me/gener_anna', phone ="89138981144", 
+                        email = "test@mail.ru", url ='https://vk.com/marintosstef', phone ="89138981144", 
                         birthdate ='1999-04-9', isActive = True):
         employee = {
                 "id": 0,
